@@ -21,7 +21,7 @@ setInterval(() => {
   
   // alert(a);
   }
-  const socket = io('ws://localhost:5000', { transports : ['websocket'] });
+  const socket = io('ws://wakemeup-aw2iqmhlm-samedovresul.vercel.app', { transports : ['websocket'] });
   socket.emit("device", coordinat)
   console.log(coordinat)
 }, 2000);
