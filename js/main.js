@@ -21,10 +21,12 @@ setInterval(() => {
   
   // alert(a);
   }
-  const socket = io('ws://wakemeup-aw2iqmhlm-samedovresul.vercel.app', { transports : ['websocket'] });
+  const socket = io('ws://wakemeup-app.herokuapp.com', { transports : ['websocket'] });
   socket.emit("device", coordinat)
   console.log(coordinat)
 }, 2000);
+
+
 
 // function getLocation() {
 //   if (navigator.geolocation) {
