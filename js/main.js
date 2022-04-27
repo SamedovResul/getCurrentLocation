@@ -13,6 +13,7 @@ setInterval(() => {
   }
   
   function showPosition(position) {
+    alert(position)
     coordinat ={
       lat: position.coords.latitude,
       lng: position.coords.longitude
@@ -24,7 +25,7 @@ setInterval(() => {
   getLocation()
   const socket = io('ws://wakemeup-app.herokuapp.com', { transports : ['websocket'] });
   socket.emit("device", coordinat)
-  alert(coordinat);
+  // alert(coordinat);
 }, 2000);
 
 
