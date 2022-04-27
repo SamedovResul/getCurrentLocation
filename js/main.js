@@ -13,13 +13,13 @@ setInterval(() => {
   }
   
   function showPosition(position) {
-    alert(position)
+    
     coordinat ={
       lat: position.coords.latitude,
       lng: position.coords.longitude
     }
-  // a = position.coords.latitude + ',' + position.coords.longitude;
-  
+    let a = position.coords.latitude + ',' + position.coords.longitude;
+    alert(a)
   
   }
   getLocation()
