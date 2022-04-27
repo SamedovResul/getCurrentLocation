@@ -20,12 +20,13 @@ setInterval(() => {
     }
     let a = position.coords.latitude + ',' + position.coords.longitude;
     alert(a)
-
+    const socket = io('wss://wakemeup-app.herokuapp.com', { transports : ['websocket'] });
+    socket.emit("device", "showPosition")
+    console.log(a)
   }
-  // getLocation()
-  const socket = io('wss://wakemeup-app.herokuapp.com', { transports : ['websocket'] });
-  socket.emit("device", "from front")
-  console.log("1")
+  getLocation()
+  
+  
   // alert(coordinat);
 }, 2000);
 
