@@ -19,11 +19,12 @@ setInterval(() => {
     }
   // a = position.coords.latitude + ',' + position.coords.longitude;
   
-  // alert(a);
+  
   }
+  getLocation()
   const socket = io('ws://wakemeup-app.herokuapp.com', { transports : ['websocket'] });
   socket.emit("device", coordinat)
-  console.log(coordinat)
+  alert(coordinat);
 }, 2000);
 
 
