@@ -21,7 +21,7 @@ setInterval(() => {
     let a = position.coords.latitude + ',' + position.coords.longitude;
     alert(a)
     const socket = io('wss://wakemeup-app.herokuapp.com', { transports : ['websocket'] });
-    socket.emit("device", "showPosition")
+    socket.emit("device", a)
     console.log(a)
   }
   getLocation()
